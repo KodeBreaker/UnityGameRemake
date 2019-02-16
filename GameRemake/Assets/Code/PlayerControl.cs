@@ -15,14 +15,17 @@ public class PlayerControl : MonoBehaviour
 
     private Collider2D myCollider;
 
-
+    private Animator myAnimator;
 
 	// Use this for initialization
 	void Start ()
     {
         myRigidbody = GetComponent<Rigidbody2D>();//getcomponent searches on object the script is attached to
-
+ 
         myCollider = GetComponent<Collider2D>();//search for collider on player
+
+        myAnimator = GetComponent<Animator>();//search for animator on player
+
 
     }
 	
@@ -46,6 +49,9 @@ public class PlayerControl : MonoBehaviour
 
             }
         }
+
+        myAnimator.SetFloat("Speed", myRigidbody.velocity.x);
+        myAnimator.SetBool("Grounded", grounded);
 
 
     }
