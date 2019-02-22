@@ -24,7 +24,7 @@ public class PlayerControl : MonoBehaviour
  
         myCollider = GetComponent<Collider2D>();//search for collider on player
 
-        myAnimator = GetComponent<Animator>();//search for animator on player
+        myAnimator = GetComponent<Animator>();//search for animator connected on player
 
 
     }
