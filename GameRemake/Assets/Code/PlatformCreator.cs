@@ -13,13 +13,13 @@ public class PlatformCreator : MonoBehaviour {
     public float distanceBetweenMin;
     public  float distanceBetweenMax;
 
+    public ObjectPooler theObjectPool;
+
 	// Use this for initialization
 	void Start ()
     {
         platformWidth = thePlatform.GetComponent<BoxCollider2D>().size.x;//getting the platform width
-
-
-
+       
     }
 	
 	// Update is called once per frame
@@ -34,8 +34,12 @@ public class PlatformCreator : MonoBehaviour {
             + platformWidth + distanceBetween, transform.position.y, transform.position.z);
 
             //instantiate creates copy of platform
-            Instantiate(thePlatform, transform.position, transform.rotation);
+            //Instantiate(thePlatform, transform.position, transform.rotation);
 
+            GameObject newPlatform = theObjectPool.GetPooledObject();//new platform which will equal an object in list
+            newPlatform.transform.position = transform.position;//put platform into a place
+            newPlatform.transform.rotation = transform.rotation; //give a rotation value
+            newPlatform.SetActive(true);
 
         }
 	}
