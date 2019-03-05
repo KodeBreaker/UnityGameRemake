@@ -63,9 +63,9 @@
   <ItemGroup>
     <Compile Include="Assets\Code\CameraController.cs" />
     <Compile Include="Assets\Code\ObjectPooler.cs" />
-    <Compile Include="Assets\Code\PlatformCreator.cs" />
-    <Compile Include="Assets\Code\PlatformDestroy.cs" />
-    <Compile Include="Assets\Code\PlayerControl.cs" />
+    <Compile Include="Assets\Code\PlatformDestroyer.cs" />
+    <Compile Include="Assets\Code\PlatformGenerator.cs" />
+    <Compile Include="Assets\Code\PlayerController.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/DATA/Imran_tsatiev/Documents/GitHub/UnityGameRemake/GameRemake/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
