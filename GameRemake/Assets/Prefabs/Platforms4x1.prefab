@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4656702206752440}
   - component: {fileID: 212636676234757348}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tile_11 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4634527348715466}
   - component: {fileID: 212788710650784214}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tile_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4835364165172376}
   - component: {fileID: 212627202566035618}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tile_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4320370546214650}
   - component: {fileID: 212787347772078626}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tile_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4404421606924764}
   - component: {fileID: 61532459530332590}
-  m_Layer: 0
+  - component: {fileID: 114347621118007860}
+  m_Layer: 8
   m_Name: Platforms4x1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,6 +186,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.23, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114347621118007860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1823838935611194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff5d94b1cb8d8d4a8507ed677d1d769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformDestructionPoint: {fileID: 0}
 --- !u!212 &212627202566035618
 SpriteRenderer:
   m_ObjectHideFlags: 1

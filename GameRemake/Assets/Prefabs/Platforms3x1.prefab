@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4250657628608110}
   - component: {fileID: 212396400209845778}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tile_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4893233280245646}
   - component: {fileID: 212947044098797448}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tile_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4962511850495418}
   - component: {fileID: 212942765406000076}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tile_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4915237456578414}
   - component: {fileID: 61706532546994264}
-  m_Layer: 0
+  - component: {fileID: 114581868417473068}
+  m_Layer: 8
   m_Name: Platforms3x1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +109,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1947446321437898}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.81, y: 0.9571255, z: -9.980469}
+  m_LocalPosition: {x: -9.52029, y: -0.60521793, z: -9.980469}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4893233280245646}
@@ -155,6 +156,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.73, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114581868417473068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1947446321437898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff5d94b1cb8d8d4a8507ed677d1d769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformDestructionPoint: {fileID: 0}
 --- !u!212 &212396400209845778
 SpriteRenderer:
   m_ObjectHideFlags: 1
