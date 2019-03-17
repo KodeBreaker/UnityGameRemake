@@ -62,11 +62,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Code\CameraController.cs" />
+    <Compile Include="Assets\Code\CoinGenerator.cs" />
     <Compile Include="Assets\Code\GameManager.cs" />
+    <Compile Include="Assets\Code\MainMenu.cs" />
     <Compile Include="Assets\Code\ObjectPooler.cs" />
+    <Compile Include="Assets\Code\PickupPoints.cs" />
     <Compile Include="Assets\Code\PlatformDestroyer.cs" />
     <Compile Include="Assets\Code\PlatformGenerator.cs" />
     <Compile Include="Assets\Code\PlayerController.cs" />
+    <Compile Include="Assets\Code\ScoreManager.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/DATA/Imran_tsatiev/Documents/GitHub/UnityGameRemake/GameRemake/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

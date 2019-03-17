@@ -29,6 +29,10 @@ public class PlayerController : MonoBehaviour {
 
     private Animator myAnimator;
 
+    private bool stoppedJumping;//become true when touching ground, false when not touching ground
+    private bool canDoubleJump;
+
+
     // Use this for initialization
     void Start ()
     {
@@ -46,6 +50,8 @@ public class PlayerController : MonoBehaviour {
         moveSpeedStore = moveSpeed;
         speedMilestoneCountStore = speedMilestoneCount;
         speedIncreaseMilestoneStore = speedIncreaseMilestone;
+
+        stoppedJumping = true;
 
     }
 
@@ -73,12 +79,23 @@ public class PlayerController : MonoBehaviour {
             {
 
                 myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
+                stoppedJumping = false;
+            }
+            if(!grounded && canDoubleJump)
+            {
+                //player can double jump by tapping mouse again.(not same as jumping really high by holding mouse button down)
+                myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
+                jumpTimeCounter = jumpTime;
+                stoppedJumping = false;
+                canDoubleJump = false;
+                
 
             }
+
         }
 
         //jump higher if you hold down mouse button
-        if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
+        if ((Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0)) && !stoppedJumping)
         {
             if(jumpTimeCounter > 0)
             {
@@ -91,11 +108,13 @@ public class PlayerController : MonoBehaviour {
         if(Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
         {
             jumpTimeCounter = 0;
+            stoppedJumping = true;
         }
 
         if(grounded)//resets jumptime counter when grounded
         {
             jumpTimeCounter = jumpTime;
+            canDoubleJump = true;
         }
 
         myAnimator.SetFloat("Speed", myRigidbody.velocity.x);
