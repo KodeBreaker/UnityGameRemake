@@ -27,6 +27,9 @@ public class PlatformGenerator : MonoBehaviour {
     private CoinGenerator theCoinGenerator;
     public float randomCoinTreshold;
 
+    public float randomSpikeThreshold;
+    public ObjectPooler spikePool;
+
     // Use this for initialization
     void Start ()
     {
@@ -80,7 +83,22 @@ public class PlatformGenerator : MonoBehaviour {
                 //spawns coins on top of platforms
                 theCoinGenerator.SpawnCoins(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z));
             }
-            
+
+            //pooling the spikes
+            if(Random.Range(0f, 100f) < randomSpikeThreshold)
+            {
+                GameObject newSpike = spikePool.GetPooledObject();
+                float spikeXPosition = Random.Range(-platformWidths[platformSelector] / 2f + 1f, platformWidths[platformSelector] / 2f - 1f);
+
+                //the spikes will spawn in different spots on the platforms rather than a single spot every time. making the game a little harder
+                Vector3 spikePosition = new Vector3(spikeXPosition, 0.2f, 0f);
+
+                newSpike.transform.position = transform.position + spikePosition;
+                newSpike.transform.rotation = transform.rotation;
+                newSpike.SetActive(true);
+            }
+
+
                 transform.position = new Vector3(transform.position.x + (platformWidths[platformSelector] / 2), transform.position.y, transform.position.z);
 
         }
