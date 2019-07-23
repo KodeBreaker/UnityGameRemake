@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-D:/DATA/Imran_tsatiev/Documents/GitHub/UnityGameRemake/GameRemake/Little Knight/Little Knight.exe
+D:/DATA/Imran_tsatiev/Documents/GitHub/UnityGameRemake/GameRemake/Little Knight 2.0/Little Knight.exe
 SceneListBegin?
 Assets/Scenes/Main Menu.unity
 Assets/Scenes/SampleScene.unity
